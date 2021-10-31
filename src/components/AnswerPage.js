@@ -16,7 +16,7 @@ export default class AnswerPage extends Component {
                     <p className=" text-center capitalize text-green-900 text-2xl font-semibold">
                         {this.props.question==="" ? "You have no questions!" : this.props.question+" ?"} 
                     </p>
-                </div>
+                </div><br/>
 
                 <p className="text-left text-lg font-semibold">
                    Your Options:
@@ -40,7 +40,7 @@ export default class AnswerPage extends Component {
                         handleClick={this.props.handleAskAgain}
                     />
                     <DarkButton
-                        text="Ask another question"
+                        text="New question"
                         icon={<MdQuestionAnswer className="mt-1"/>}
                         handleClick={this.props.handleAskNewQuestion}
                     />

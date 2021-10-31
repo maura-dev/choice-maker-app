@@ -14,14 +14,14 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className="p-10 bg-white-100 h-full flex justify-around">
-        <div className="w-1/3">
+      <div className="flex p-10 bg-white-100 h-full flex-col sm:flex-row justify-around overflow-y-scroll">
+        <div className=" w-full sm:w-3/5 pt-16">
           <img src={HeroImg} alt="hero-img"/>
         </div>
-        <div className="w-2/3 pt-16 px-24 text-center">
-          <h3 className="font-cursive text-green-900 text-4xl font-bold">Decipher</h3><br/>
-          <p className="text-green-900 text-2xl">Making choices just got easier</p>
-          <p className="text-green-900 text-2xl">Create your own  questions with possible options and let decipher decide the best option</p><br/>
+        <div className="w-full pt-16 px-0 sm:px-10 md:px-24 text-center">
+          <h3 className="font-cursive text-green-500 text-4xl font-bold">Decipher</h3><br/>
+          <p className="text-green-900 text-lg md:text-xl lg:text-2xl">Making choices just got easier</p>
+          <p className="text-green-900 text-lg md:text-xl lg:text-2xl">Create your own  questions with possible options and let decipher decide the best option</p><br/>
           <div className="m-auto hero-btn">
             <LightButton text="Get Started" handleClick={this.handleClick}/>
           </div>

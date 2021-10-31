@@ -25,3 +25,38 @@ button, input{
   width:fit-content;
 }
 
+@media screen and (max-width:400px) {
+  .cont{
+    padding:20px;
+  }
+
+  .text-base{
+    font-size: 0.85rem;
+  }
+
+  button{
+    padding:10px !important;
+  }
+}
+
+@media screen and (max-width:300px) {
+  .header{
+    padding:0.75rem 1rem;
+  }
+
+  .text-lg{
+    font-size: 1rem;
+  }
+
+  .text-2xl {
+    font-size: 1.2rem;
+  }
+
+  .text-xl {
+    font-size: 1.1rem;
+  }
+
+  button{
+    font-size: 12px;
+  }
+}

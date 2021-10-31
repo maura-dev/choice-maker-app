@@ -6,7 +6,7 @@ export default class Header extends Component {
     
     render() {
         return (
-            <div className="flex justify-between px-10 py-3 text-base text-green-900">
+            <div className="header flex justify-between px-10 py-3 text-base text-green-900">
                 <Link to="/">    
                     <div className="flex cursor-pointer"> <GiThink/>&nbsp; 
                         <p className="font-cursive">Decipher</p>
