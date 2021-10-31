@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import '@fontsource/dancing-script';
+import '@fontsource/lato';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
