@@ -42,8 +42,9 @@ export default class Decipher extends Component {
             let Qarr=[];
             //targets the value of the question field and stores the value in Qarr
             const question= document.getElementById("question").value
+            console.log(question.length)
             //ensures that empty values are not pushed to the question store
-            if(question !== "" && question !== " " && question !== null){
+            if(question !== "" && question !==" " && question !== null && question.length!==0 ){
                 Qarr.push(question)
             }
             
@@ -55,13 +56,6 @@ export default class Decipher extends Component {
                 if(choices !== "" && choices !== " " && choices !== null){
                     Carr.push(choices)
                 }  
-            }
-
-            //checks the fields for empty values
-            if(this.state.questions===[] || this.state.choices===[]){
-                document.getElementById("error").style.display="flex"
-            } else{
-                
             }
 
             //sets the state to show answer page updating the state values of questions and choices
@@ -77,20 +71,23 @@ export default class Decipher extends Component {
             
             //stores questions answered in local storage
             function Store(){
-                console.log(this.state.questions[0])
-                var localStore= localStorage.getItem("questions")
-                var questionStore= [] 
-                //console.log(localStore)
-                if(localStore===null || localStore===undefined ||localStore===""){
-                    questionStore.push(this.state.questions)
-                    console.log(questionStore)
-                    localStorage.setItem("questions", questionStore)
+                console.log(this.state.questions)
+                if(this.state.questions.length===0 || this.state.questions===undefined || this.state.questions===null){
+                    return;
                 } else{
-                    console.log(localStore)
-                    questionStore.push(localStore)
-                    questionStore.push(this.state.questions)
-                    localStorage.setItem("questions", questionStore)
+                    var localStore= localStorage.getItem("questions")
+                    var questionStore= [] 
+
+                    if(localStore===null || localStore===undefined ||localStore===""){
+                        questionStore.push(this.state.questions)
+                        localStorage.setItem("questions", questionStore)
+                    } else{
+                        questionStore.push(localStore)
+                        questionStore.push(this.state.questions)
+                        localStorage.setItem("questions", questionStore)
+                    }
                 }
+                
                 
             }
             

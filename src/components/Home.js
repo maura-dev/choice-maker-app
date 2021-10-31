@@ -22,7 +22,7 @@ export default class Home extends Component {
           <h3 className="font-cursive text-green-500 text-4xl font-bold">Decipher</h3><br/>
           <p className="text-green-900 text-lg md:text-xl lg:text-2xl">Making choices just got easier</p>
           <p className="text-green-900 text-lg md:text-xl lg:text-2xl">Create your own  questions with possible options and let decipher decide the best option</p><br/>
-          <div className="m-auto hero-btn">
+          <div className="m-auto hero-btn mb-10">
             <LightButton text="Get Started" handleClick={this.handleClick}/>
           </div>
         </div>
