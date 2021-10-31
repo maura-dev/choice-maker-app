@@ -14,7 +14,7 @@ export default class AnswerPage extends Component {
                 {console.log(this.props.question)} */}
                 <div>
                     <p className=" text-center capitalize text-green-900 text-2xl font-semibold">
-                        {this.props.question==="" ? "You have no questions!" : this.props.question+" ?"} 
+                        {this.props.question===null||this.props.question===undefined ? "You have no questions!" : this.props.question+" ?"} 
                     </p>
                 </div><br/>
 
